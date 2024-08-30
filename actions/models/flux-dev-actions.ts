@@ -20,7 +20,7 @@ export async function sendPrompt({ prompt }: SendPromptProps): ServerActionResul
     );
   }
 
-  const options: PredictionOptions = {
+  const options: GenerateImageOptions = {
     model: "black-forest-labs/flux-dev",
     input: {
       prompt,

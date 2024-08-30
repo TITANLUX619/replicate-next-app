@@ -3,7 +3,7 @@
 import * as z from "zod";
 import { useState, useTransition } from "react";
 import Image from "next/image";
-import { sendPrompt } from "@/actions/flux-dev-actions";
+import { sendPrompt } from "@/actions/models/flux-dev-actions";
 import useToast from "@/hooks/useToast";
 import { Prediction } from "replicate";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -40,7 +40,7 @@ export default function Home() {
   }
 
   return (
-    <Card className="settings">
+    <Card className="generate-image">
       <CardHeader>
         <h1 className="py-6 text-center font-bold text-2xl">
           Describe a picture:

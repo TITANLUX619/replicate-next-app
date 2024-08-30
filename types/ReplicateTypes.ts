@@ -1,6 +1,12 @@
 declare type WebhookEventType = "start" | "completed";
 
-declare interface PredictionOptions {
+declare type SendPromptProps = {
+  prompt: string;
+};
+
+declare type PredictionOutput = string
+
+declare interface GenerateImageOptions {
   model: string;
   version?: string;
   input: {
@@ -17,11 +23,19 @@ declare interface PredictionOptions {
   webhook_events_filter?: WebhookEventType[];
 }
 
-declare type SendPromptProps = {
-  prompt: string;
-};
+declare type RemoveBackgroundProps = {
+  image: string;
+}
 
-declare type PredictionOutput = string
+declare type RemoveBackgroundOptions = {
+  model: string;
+  version?: string;
+  input: {
+    image: string;
+  };
+  webhook?: string;
+  webhook_events_filter?: WebhookEventType[];
+};
 
 
 
