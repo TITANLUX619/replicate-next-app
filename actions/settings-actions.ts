@@ -13,6 +13,7 @@ import { settingsSchema } from "@/schemas";
 export const settings = async (
   values: z.infer<typeof settingsSchema>
 ) => {
+
   const user = await currentUser();
 
   if (!user) {
@@ -25,12 +26,11 @@ export const settings = async (
     return { error: "Unauthorized" }
   }
 
-  if (user.isOAuth) {
-    values.email = undefined;
-    values.password = undefined;
-    values.newPassword = undefined;
-    values.twoFactorEnabled = undefined;
-  }
+  /*   if (user.isOAuth) {
+      values.email = undefined;
+      values.password = undefined;
+      values.newPassword = undefined;
+    } */
 
   if (values.email && values.email !== user.email) {
     const existingUser = await getUserByEmail(values.email);
@@ -70,11 +70,15 @@ export const settings = async (
 
   Object.keys(values).forEach((key) => {
 
-    if (values[key as keyof z.infer<typeof settingsSchema>] as string === '') {
+    const value = values[key as keyof z.infer<typeof settingsSchema>]
+
+    if (typeof value === 'string' && value === '') {
 
       values[key as keyof z.infer<typeof settingsSchema>] = undefined;
     }
   });
+
+
 
   const updatedUser = await prisma.user.update({
     where: { id: dbUser.id },

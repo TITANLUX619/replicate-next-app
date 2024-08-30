@@ -23,6 +23,7 @@
   min-height: calc(100vh - 64px);
 }
 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -182,5 +183,9 @@
 /* ----------------------------------------------- */ 
   .settings {
     @apply w-full max-w-4xl min-w-[320px] sm:min-w-[500px] lg:min-w-[700px] xl:min-w-[800px]
+  }
+/* ----------------------------------------------- */  
+  .r-image-wrapper {
+    @apply w-full flex items-center justify-center;
   }
 }

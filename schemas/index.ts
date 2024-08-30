@@ -66,4 +66,8 @@ export const settingsSchema = z
     }
   });
 
+export const promptFormSchema = z.object({
+  prompt: z.string().optional(),
+});
+
 

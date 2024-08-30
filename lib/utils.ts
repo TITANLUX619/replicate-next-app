@@ -16,7 +16,7 @@ export const validateFormFields = <T extends z.ZodSchema>(fields: unknown, schem
   return true;
 };
 
-
+export const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 export const defaultAuthFormValues = {
   firstName: "",
