@@ -70,8 +70,5 @@ export const promptFormSchema = z.object({
   prompt: z.string().optional(),
 });
 
-export const uploadImageFormSchema = z.object({
-  image: z.instanceof(File).optional(),
-});
 
 

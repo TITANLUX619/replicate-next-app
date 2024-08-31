@@ -37,5 +37,22 @@ declare type RemoveBackgroundOptions = {
   webhook_events_filter?: WebhookEventType[];
 };
 
+declare type RemoveObjectsProps = {
+  image: string;
+  mask: string;
+}
+
+declare type RemoveObjectsOptions = {
+  model: string;
+  version?: string;
+  input: {
+    image: string;
+    mask: string;
+  };
+  webhook?: string;
+  webhook_events_filter?: WebhookEventType[];
+};
+
+
 
 

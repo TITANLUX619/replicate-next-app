@@ -15,7 +15,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
 
-export default function Home() {
+export default function GenerateImagePage() {
   const [prediction, setPrediction] = useState<Prediction | undefined>(undefined);
   const addToast = useToast();
   const [isPending, startTransition] = useTransition();

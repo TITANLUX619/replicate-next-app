@@ -9,6 +9,10 @@ declare type AuthBackButtonProps = {
   href: string;
 }
 
+declare type ReloadButtonProps = {
+  label: string;
+}
+
 declare type AuthCardWrapperProps = {
   children: React.ReactNode;
   headerLabel: string;

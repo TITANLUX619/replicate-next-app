@@ -58,8 +58,8 @@ const Navbar = () => {
                       <ListItem href="/remove-background" title="Background remover">
                         Remove background from photos
                       </ListItem>
-                      <ListItem href="/try-on" title="Virtual clothing">
-                        Try on clothes virtually
+                      <ListItem href="/remove-objects" title="Objects remover">
+                        Remove objects from photos
                       </ListItem>
                     </ul>
                   </NavigationMenuContent>

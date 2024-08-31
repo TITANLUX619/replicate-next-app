@@ -28,7 +28,7 @@ export const ourFileRouter = {
 
       // !!! Whatever is returned here is sent to the clientside `onClientUploadComplete` callback
       return { uploadedBy: metadata.userId };
-    }),
+    })
 } satisfies FileRouter;
 
 export type OurFileRouter = typeof ourFileRouter;
