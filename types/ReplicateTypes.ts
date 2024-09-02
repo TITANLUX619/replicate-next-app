@@ -53,6 +53,26 @@ declare type RemoveObjectsOptions = {
   webhook_events_filter?: WebhookEventType[];
 };
 
+declare type TryOnProps = {
+  humanImage: string;
+  garmImage: string;
+  garmDescription: string;
+  category: string;
+}
 
+declare type TryOnOptions = {
+  model: string;
+  version?: string;
+  input: {
+    crop: boolean;
+    garm_img: string,
+    human_img: string,
+    mask_only: boolean,
+    garment_des: string,
+    category: string
+  };
+  webhook?: string;
+  webhook_events_filter?: WebhookEventType[];
+};
 
 
