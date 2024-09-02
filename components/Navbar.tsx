@@ -17,7 +17,7 @@ const Navbar = () => {
   const router = useRouter()
 
   return (
-    <nav className="bg-indigo-950/50 w-full z-50">
+    <nav className="bg-foreground/50 w-full z-50">
       <div className="w-full max-w-full px-4 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center justify-between h-16 gap-40">

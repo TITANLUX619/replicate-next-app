@@ -14,3 +14,9 @@ declare type Result<DataType> = {
 }
 
 declare type ServerActionResult<DataType> = Promise<Result<DataType>>
+
+declare type UploadDropzoneComponentProps = {
+  endpoint: string;
+  onClientUploadComplete: (res: any) => void;
+  onUploadError: (error: Error) => void;
+}

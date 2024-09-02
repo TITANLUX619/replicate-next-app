@@ -21,8 +21,7 @@ const UserMenu = () => {
         <Avatar>
           <AvatarImage src={user?.image || ''} />
           <AvatarFallback>
-            <FaUser className='text-white' />
-            {user?.name?.charAt(0)}
+            <FaUser className='text-foreground' />
           </AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>

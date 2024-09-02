@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Toaster } from '@/components/ui/sonner'
+import DarkModeButton from "@/components/DarkModeButton";
 
 
 const inter = Poppins({ subsets: ["latin"], weight: ['600'] });
@@ -24,6 +25,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
+        <DarkModeButton />
         <Toaster position="bottom-center" />
       </body>
     </html>

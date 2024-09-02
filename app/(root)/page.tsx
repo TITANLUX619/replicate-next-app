@@ -1,3 +1,5 @@
+import Loading from "./loading";
+
 export default async function Home() {
   return (
     <div className="home">

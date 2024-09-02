@@ -3,7 +3,7 @@
 import * as z from "zod";
 import { useState, useTransition } from "react";
 import Image from "next/image";
-import { sendPrompt } from "@/actions/models/flux-dev-actions";
+import { sendPrompt } from "@/actions/models/flux-actions";
 import useToast from "@/hooks/useToast";
 import { Prediction } from "replicate";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";

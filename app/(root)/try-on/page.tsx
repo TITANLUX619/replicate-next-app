@@ -101,7 +101,6 @@ export default function TryOnPage() {
                   <p>Garment:</p>
                   {!garmImage && (
                     <UploadDropzone
-                      className="w-full"
                       endpoint="imageUploader"
                       onClientUploadComplete={(res) => onUploadComplete(res, 'garm')}
                       onUploadError={onUploadError}
