@@ -92,7 +92,7 @@ export default function RemoveObjectsPage() {
               />
             </div>
           )}
-          {!prediction && uploadedImage && maskUrl && (
+          {uploadedImage && maskUrl && (
             <Button
               disabled={!uploadedImage || !maskUrl || isPending}
               type="submit"
